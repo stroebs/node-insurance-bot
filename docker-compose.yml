@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  bot:
+    build: .
+
+  ngrok:
+    image: stroebs/ngrok
+    command: ngrok http bot:3000 -log=stdout
+    ports:
+      - 4040:4040
